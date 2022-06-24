@@ -22,6 +22,11 @@ public class TutorialController {
 	@Autowired
 	TutorialService tutorialService;
 	
+	@GetMapping("/appHealth")
+	public String appHealth() {
+		return "Healthy";
+	}
+	
 	@GetMapping("/getStudents")
 	public List<Student> getStudents() {
 		return tutorialService.getStudents();
